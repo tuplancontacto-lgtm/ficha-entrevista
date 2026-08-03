@@ -249,7 +249,7 @@ const clienteFields = [
   {key:'comuna', type:TEXT, label:'Comuna'},
   {key:'profesion', type:NUMBER, label:'RUT Cliente'},
   {key:'empresa', type:TEXT, label:'Empresa donde trabaja'},
-  {key:'fecha', type:'date', label:'Fecha de la entrevista'},
+  {key:'fecha', type:'date', label:'Fecha de Nacimiento'},
 ];
 sections.forEach((s,i)=>{ s.num = i+1; });
 
