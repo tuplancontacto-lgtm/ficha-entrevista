@@ -1024,7 +1024,7 @@ function downloadSummary(){
   lines.push(L('Correo electrónico', c.correo));
   lines.push(L('Edad', c.edad));
   lines.push(L('Comuna', c.comuna));
-  lines.push(L('Profesión / actividad', c.profesion));
+  lines.push(L('RUT Cliente', c.profesion));
   lines.push(L('Empresa', c.empresa));
   lines.push(L('Fecha de la entrevista', c.fecha));
   lines.push('');
