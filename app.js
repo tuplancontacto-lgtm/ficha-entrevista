@@ -168,7 +168,7 @@ const sections = [
     sub:'Entiende sus preferencias de atención y su composición familiar.',
     fields:[
       {key:'clinica_preferida', type:RADIO_OTHER, label:'¿Cuál es la clínica donde prefieres atenderte?',
-        options:['Clínica Bupa','Red Salud','Andes Salud','Hospital Clínico']},
+        options:['Clínica Bupa','Red Salud','Ciudad del Mar','Hospital Clínico']},
       {key:'cargas_familiares', type:CHECK_MULTI, label:'¿Tienes cargas familiares?', options:['No','Cónyuge','Hijos'],
         conditional:{onValue:'Hijos', field:{key:'cantidad_hijos', type:NUMBER, label:'Cantidad de hijos'}}},
       {key:'uso_plan', type:RADIO, label:'¿Utilizas mucho el plan?', options:['Poco','Regular','Frecuente']},
@@ -247,7 +247,7 @@ const clienteFields = [
   {key:'correo', type:'email', label:'Correo electrónico'},
   {key:'edad', type:NUMBER, label:'Edad'},
   {key:'comuna', type:TEXT, label:'Comuna'},
-  {key:'profesion', type:TEXT, label:'Profesión / actividad'},
+  {key:'profesion', type:NUMBER, label:'RUT Cliente'},
   {key:'empresa', type:TEXT, label:'Empresa donde trabaja'},
   {key:'fecha', type:'date', label:'Fecha de la entrevista'},
 ];
@@ -1026,7 +1026,7 @@ function downloadSummary(){
   lines.push(L('Comuna', c.comuna));
   lines.push(L('RUT Cliente', c.profesion));
   lines.push(L('Empresa', c.empresa));
-  lines.push(L('Fecha de la entrevista', c.fecha));
+  lines.push(L('Fecha de la Entrevista', c.fecha));
   lines.push('');
   lines.push('1. ROMPER EL HIELO');
   lines.push(L('Preguntas realizadas', ['q_como_estas','q_minutos','q_dedica','q_dependiente'].filter(k=>s1[k]).length + ' de 4'));
@@ -1105,8 +1105,8 @@ function downloadSummary(){
   lines.push('9. CIERRE');
   lines.push(L('¿Quiere estudio comparativo gratuito?', s9.estudio_comparativo));
   lines.push(L('Documentos a solicitar', s9.documentos));
-  lines.push(L('Fecha propuesta', s9.fecha_propuesta));
-  lines.push(L('Hora propuesta', s9.hora_propuesta));
+  lines.push(L('Fecha Entrevista', s9.fecha_propuesta));
+  lines.push(L('Hora Entrevista', s9.hora_propuesta));
   lines.push('');
   lines.push('OBSERVACIONES DEL ASESOR');
   lines.push(s10.obs_asesor || 'Sin observaciones registradas.');
