@@ -219,7 +219,7 @@ const sections = [
     sub:'Selecciona todos los que apliquen.',
     fields:[
       {key:'beneficios', type:CHECK_MULTI, label:'Beneficios de interés', hideLabel:true,
-        options:['Telemedicina ilimitada','Descuento en medicamentos','Rescate de urgencia','Kinesiología a domicilio','Telemedicina veterinaria','Cobertura hospitalaria','Libre elección']},
+        options:['Telemedicina ilimitada','Descuento en medicamentos','Rescate de urgencia','Kinesiología a domicilio','Dentales','Cobertura hospitalaria','Cesantía']},
     ]
   },
   {
@@ -227,8 +227,8 @@ const sections = [
     sub:'Agenda el envío de la propuesta y solicita la documentación necesaria.',
     fields:[
       {key:'estudio_comparativo', type:RADIO, label:'¿Te gustaría que hiciera un estudio comparativo gratuito de tu plan?', options:['Sí','No']},
-      {key:'documentos', type:CHECK_MULTI, label:'Documentos a solicitar', options:['Liquidación de sueldo','Cédula de identidad','Certificado de cotizaciones','Plan actual']},
-      {key:'fecha_propuesta', type:'date', label:'Fecha para enviar propuesta'},
+      {key:'documentos', type:CHECK_MULTI, label:'Documentos a solicitar', options:['Liquidación de sueldo','Cédula de identidad','Certificado de Remuneraciones','Plan actual']},
+      {key:'fecha_propuesta', type:'date', label:'Fecha para Entrevista'},
       {key:'hora_propuesta', type:'time', label:'Hora'},
     ]
   },
